@@ -32,8 +32,9 @@ A news scraper project to learn to use cheerio with mongodb
     scraping bits off the web
     <br />
     <a href="https://github.com/jtsai972/news-scraper"><strong>Explore the docs »</strong></a>
-    ·
-    <a href="https://mysterious-brook-64994.herokuapp.com/"><strong>Demo on Heroku »</strong></a>
+    <br />
+    <!-- <a href="https://mysterious-brook-64994.herokuapp.com/"><strong>Demo on Heroku »</strong></a> -->
+    <a href="https://jtsai972-news-scraper.herokuapp.com/"><strong>Demo on Heroku »</strong></a>
     <br />
     <br />
     <a href="https://github.com/jtsai972/news-scraper/issues">Report Bug</a>
