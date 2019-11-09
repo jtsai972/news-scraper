@@ -1,3 +1,7 @@
+//Dotenv
+const dotenv = require("dotenv")
+dotenv.config();
+
 //Express
 const express = require("express");
 const exphbs = require("express-handlebars");
@@ -12,9 +16,8 @@ const mongoose = require("mongoose");
 // It works on the client and on the server
 
 
-
 var PORT = process.env.PORT || 3000;
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || process.env.MLAB_LINK ||"mongodb://localhost/mongoHeadlines";
 
 // Initialize Express
 var app = express();
@@ -36,7 +39,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 // Routes
 require("./controllers/scraperController")(app);

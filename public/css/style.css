@@ -98,7 +98,8 @@
   .article:nth-of-type(3) {
     margin-right: 0;
   }
-    .article h3 {
+    article h3 {
+      line-height: 1.5em;
       margin: 1rem 0;
     }
 
