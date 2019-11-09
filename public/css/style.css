@@ -78,3 +78,26 @@
     color: #fff;
     margin-top: auto;
   }
+
+/* --------------------------------
+ * HOME ARTICLES STYLING
+ * -------------------------------- */
+  .news {
+    display: flex;
+      flex-wrap: wrap;
+  }
+  article {
+    border: 1px solid #ccc;
+      border-radius: 0.5em;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.1);
+    margin: 2em 0;
+      margin-right: 5%;
+    padding: 1em;
+    width: 30%;
+  }
+  article:nth-of-type(3) {
+    margin-right: 0;
+  }
+    article h3 {
+      margin: 1rem 0;
+    }
