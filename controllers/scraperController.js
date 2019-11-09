@@ -21,7 +21,7 @@ app.get("/scrape", function(req, res) {
       // Add the text and href of every link, and save them as properties of the result object
       var result = {
         title: $(this).attr("aria-label"),
-        link: url + $(this).parent().attr("href"),
+        source: url + $(this).parent().attr("href"),
         summary: $(this).attr("data-c-br")
       };
 
