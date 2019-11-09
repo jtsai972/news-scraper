@@ -41,7 +41,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // Routes
 require("./controllers/scraperController")(app);
 require("./controllers/indexController")(app);
-// require("./controllers/articleController")(app);
+require("./controllers/articleController")(app);
 
 // Start the server
 app.listen(PORT, function() {

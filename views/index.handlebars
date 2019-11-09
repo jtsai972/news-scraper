@@ -4,7 +4,9 @@
 
   <section class="news">
     {{#each articles}}
-      {{> article-block}}
+      <a class="article" href="/articles/{{_id}}">
+        {{> article-block}}
+      </a>
     {{/each}}
   </section>
 </main>

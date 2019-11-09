@@ -1,0 +1,23 @@
+<main>
+  <div id="article">
+    {{#each articles}}
+      {{> article-block}}
+    {{/each}}
+  </div>
+
+  <h3>Comments</h3>
+  <section class="comments">
+    <form>
+      <label for="username">Nickname: </label>
+      <input id="username" type="text" placeholder="nickname">
+  
+      <label for="post-comment">Leave a comment: </label>
+      <input id="post-comment" type="textarea">
+    </form>
+
+    {{#each comments}}
+      {{> comment-block}}
+    {{/each}}
+  </section>
+</main>
+      
