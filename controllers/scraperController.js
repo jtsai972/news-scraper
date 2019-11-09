@@ -1,18 +1,15 @@
-//Setting up express
-const express = require("express");
-
 //Scraper 
 const axios = require("axios");
 const cheerio = require("cheerio");
 
 // Require all models
-const db = require("./models");
-
-var router = express.Router();
+const db = require("./../models");
 
 
-// A GET route for scraping the echoJS website
-router.get("/scrape", function(req, res) {
+module.exports = function(app) {
+  // A GET route for scraping the echoJS website
+app.get("/scrape", function(req, res) {
+  console.log("Scraping");
   let url = "https://www.usatoday.com";
   // First, we grab the body of the html with axios
   axios.get(url).then(function(response) {
@@ -46,5 +43,5 @@ router.get("/scrape", function(req, res) {
     res.send("Scrape Complete");
   });
 });
+}
 
-module.exports = router;

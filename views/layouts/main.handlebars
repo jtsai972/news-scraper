@@ -6,14 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Jomolhari|Open+Sans&display=swap" rel="stylesheet">
+
   <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
   <!-- Title -->
   <title>NewsScraper - {{title}}</title>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <h1>News Scraper</h1>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <a href="/">Home</a>
+      <a href="/scraper">Check for new articles</a>
+    </div>
+  </nav>
+
   {{{body}}}
+
+  <footer>
+    <div class="container">
+      <p>Created by Jasmine Tsai &copy;2019</p>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="/assets/js/script.js"></script>

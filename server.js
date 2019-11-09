@@ -1,6 +1,7 @@
 //Express
 const express = require("express");
 const exphbs = require("express-handlebars");
+const path = require('path');
 // var logger = require("morgan");
 
 //Database
@@ -19,6 +20,8 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 var app = express();
 
 // Configure middleware
+// directory references
+const publicDir = path.join(__dirname, './public');
 
 // Use morgan logger for logging requests
 // app.use(logger("dev"));
@@ -26,7 +29,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
-app.use("assets", express.static("public"));
+app.use("/assets", express.static(publicDir));
 
 // Set Handlebars.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -36,6 +39,9 @@ app.set("view engine", "handlebars");
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
+require("./controllers/scraperController")(app);
+require("./controllers/indexController")(app);
+// require("./controllers/articleController")(app);
 
 // Start the server
 app.listen(PORT, function() {

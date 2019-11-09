@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  transition-duration: 1s;
+  transition-property: width, height, opacity;
+  transition-timing-function: ease;
+}
+/* --------------------------------
+ * LAYOUT STYLING
+ * -------------------------------- */
+  body {
+    display: flex;
+      flex-flow: column;
+      align-items: stretch;
+      justify-items: center;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+  }
+  header, main, footer {
+    padding: 2em 0;
+  }
+  .container, main {
+    margin: 0 auto;
+    width: 90%;
+      max-width: 1200px;
+  }
+
+/* --------------------------------
+ * TEXT STYLING
+ * -------------------------------- */
+  h1, h2, h3 {
+    font-family: 'Jomolhari', serif;
+    font-weight: bold;
+  }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.25em;}
+
+/* --------------------------------
+ * LINK STYLING
+ * -------------------------------- */
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+/* --------------------------------
+ * HEADER STYLING
+ * -------------------------------- */
+  header {
+    background: #005580;
+    color: #fff;
+  }
+
+/* --------------------------------
+ * NAV STYLING
+ * -------------------------------- */
+  nav {
+    background:  #004466;
+    color: #eee;
+  }
+  nav a {
+    color: #eee;
+    display: inline-block;
+    padding: 0.5em;
+  }
+    nav a:hover, nav a.active {
+      background: rgba(0,0,0,0.25);
+      color: #eee;
+    }
+
+/* --------------------------------
+ * Footer STYLING
+ * -------------------------------- */
+  footer {
+    background: #333;
+    color: #fff;
+    margin-top: auto;
+  }
