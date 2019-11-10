@@ -40,7 +40,8 @@ app.get("/scrape", function(req, res) {
     });
 
     // Send a message to the client
-    res.redirect("/");
+    //res.redirect("/");
+    res.json("Scrape complete");
   });
 });
 }
