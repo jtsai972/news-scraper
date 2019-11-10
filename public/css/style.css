@@ -35,6 +35,9 @@
   h2 { font-size: 2em; }
   h3 { font-size: 1.25em;}
 
+  strong, b { font-weight: bold; }
+  em, i { font-style: italic; }
+
 /* --------------------------------
  * LINK STYLING
  * -------------------------------- */
@@ -86,7 +89,7 @@
     display: flex;
       flex-wrap: wrap;
   }
-  .news .article {
+  .news article {
     border: 1px solid #ccc;
       border-radius: 0.5em;
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.1);
@@ -95,12 +98,15 @@
     padding: 1em;
     width: 30%;
   }
-  .article:nth-of-type(3) {
+  .news article:nth-of-type(3) {
     margin-right: 0;
   }
     article h3 {
-      line-height: 1.5em;
+      line-height: 1.3em;
       margin: 1rem 0;
+    }
+    .source {
+      margin-top: 1em;
     }
 
 /* --------------------------------
@@ -109,19 +115,44 @@
   #article {
     margin-bottom: 2em;
   }
+  article {
+    line-height: 1.5em;
+  }
 
 /* --------------------------------
  * COMMENTS STYLING
  * -------------------------------- */
   .comments form {
-    background: #ddd;
+    background: #eee;
     display: flex;
       flex-flow: column;
     padding: 1em;
   }
-  .comments input {
+  .comments input, 
+  .comments textarea,
+  .comments button {
+    margin-top: 0.5em;
     margin-bottom: 1em;
+    padding:  0.5em;
   }
-  .comments input:last-of-type {
+  .comments button {
     margin-bottom: 0;
+  }
+  .comments textarea {
+    min-height: 15em;
+  }
+
+  .comments .comment {
+    border: 1px solid #bbb;
+      border-radius: 0.5em;
+    margin: 1em auto;
+    padding: 1em;
+  }
+  .comments .poster {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  .comments p {
+    margin-bottom: 1em;
   }

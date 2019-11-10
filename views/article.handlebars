@@ -7,12 +7,19 @@
 
   <h3>Comments</h3>
   <section class="comments">
-    <form>
+    <form id="post-comment">
       <label for="username">Nickname: </label>
       <input id="username" type="text" placeholder="nickname">
   
-      <label for="post-comment">Leave a comment: </label>
-      <input id="post-comment" type="textarea">
+      <label for="comment-text">Leave a comment: </label>
+      <textarea 
+        id="comment-text" 
+        name="textfield" 
+        rows="10" cols="70" 
+        placeholder='type your text here'>
+      </textarea>
+
+      <button>Submit</button>
     </form>
 
     {{#each comments}}

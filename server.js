@@ -17,7 +17,10 @@ const mongoose = require("mongoose");
 
 
 var PORT = process.env.PORT || 3000;
-var MONGODB_URI = process.env.MONGODB_URI || process.env.MLAB_LINK ||"mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = 
+  process.env.MONGODB_URI || 
+  /*process.env.MLAB_LINK ||*/
+  "mongodb://localhost/mongoHeadlines";
 
 // Initialize Express
 var app = express();
