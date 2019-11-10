@@ -1,30 +1,23 @@
-<main>
-  <div id="article">
-    {{#each articles}}
-      {{> article-block}}
-    {{/each}}
-  </div>
+<div id="article">
+  {{#each articles}}
+  {{> article-block}}
+  {{/each}}
+</div>
 
-  <h3>Comments</h3>
-  <section class="comments">
-    <form id="post-comment">
-      <label for="username">Nickname: </label>
-      <input id="username" type="text" placeholder="nickname">
-  
-      <label for="comment-text">Leave a comment: </label>
-      <textarea 
-        id="comment-text" 
-        name="textfield" 
-        rows="10" cols="70" 
-        placeholder='type your text here'>
+<h3>Comments</h3>
+<section class="comments">
+  <form id="post-comment">
+    <label for="username">Nickname: </label>
+    <input id="username" type="text" placeholder="nickname">
+
+    <label for="comment-text">Leave a comment: </label>
+    <textarea id="comment-text" name="textfield" rows="10" cols="70" placeholder='type your text here'>
       </textarea>
 
-      <button>Submit</button>
-    </form>
+    <button>Submit</button>
+  </form>
 
-    {{#each comments}}
-      {{> comment-block}}
-    {{/each}}
-  </section>
-</main>
-      
+  {{#each comments}}
+  {{> comment-block}}
+  {{/each}}
+</section>
