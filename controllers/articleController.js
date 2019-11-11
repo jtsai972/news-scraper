@@ -12,7 +12,10 @@ module.exports = function (app) {
   app.get("/articles/:id", function (req, res) {
 
     db.Article.findById(req.params.id)
-      .populate("notes")
+      .populate([{
+        path: "notes", 
+        options: {sort:{created_at: -1}} 
+      }])
       .then(function (result) {
         let hbsObj = {
           title: result.title,
