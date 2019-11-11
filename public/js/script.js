@@ -12,7 +12,9 @@ $("#post-comment").submit(function(event) {
 
   $.post( "/articles/:id", result, function(data) {
     //console.log(`Posted: ${res} ${req}`)
-    console.log(data);
+    //console.log(data);
+    console.log("Comment posted.");
+    location.reload();
   })
 
   $("form").trigger("reset");
